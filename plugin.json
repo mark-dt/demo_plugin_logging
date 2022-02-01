@@ -1,0 +1,45 @@
+{
+  "name": "custom.python.demo_plugin_logging",
+  "version": "1.0.6",
+  "type": "python",
+  "entity": "HOST",
+  "processTypeNames": [
+    "PYTHON"
+  ],
+  "technologies": [],
+  "metricGroup": "tech.demo_metrics",
+  "source": {
+    "package": "demo_plugin_logging",
+    "className": "DemoPlugin",
+    "install_requires": [],
+    "activation": "Singleton"
+  },
+  "metrics": [],
+  "properties": [
+    {
+      "key": "debug_level",
+      "type": "Dropdown",
+      "dropdownValues": [
+        "DEBUG",
+        "ERROR",
+        "INFO",
+        "WARNING"
+      ]
+    }
+  ],
+  "configUI": {
+    "displayName": "OneAgent Demo Logging Plugin",
+    "properties": [
+      {
+        "key": "debug_level",
+        "displayName": "Debug Level",
+        "displayHint": ""
+      }
+    ]
+  },
+  "ui": {
+    "keymetrics": [],
+    "keycharts": [],
+    "charts": []
+  }
+}
