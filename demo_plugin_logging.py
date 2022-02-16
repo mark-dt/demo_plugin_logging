@@ -2,6 +2,7 @@ from ruxit.api.base_plugin import BasePlugin
 from ruxit.api.data import MEAttribute
 from ruxit.api.snapshot import pgi_name
 
+import logging
 
 import simple_logger
 
@@ -9,7 +10,8 @@ class DemoPlugin(BasePlugin):
     def initialize(self, **kwargs):
 
         log_level = self.config['debug_level']
-        self.logger = simple_logger.restore_logger(__file__, log_level)
+        logger = logging.getLogger(__name__)
+        self.logger = simple_logger.restore_logger(__file__, log_level, logger)
         self.logger.debug('INIT DONE')
 
     def stuff(self):
